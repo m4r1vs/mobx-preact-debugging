@@ -1,69 +1,4 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
-/******/ })
-/************************************************************************/
-/******/ ([
+webpackJsonp([3],[
 /* 0 */
 /*!************************************************!*\
   !*** ./node_modules/preact/dist/preact.esm.js ***!
@@ -5108,7 +5043,7 @@ if (typeof __MOBX_DEVTOOLS_GLOBAL_HOOK__ === "object") {
 
 /* harmony default export */ __webpack_exports__["default"] = (everything);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! ./../../webpack/buildin/global.js */ 7)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(/*! ./../../webpack/buildin/global.js */ 8)))
 
 /***/ }),
 /* 3 */
@@ -5169,7 +5104,7 @@ exports.inject = inject;
 
 var _preact = __webpack_require__(/*! preact */ 0);
 
-var _hoistNonReactStatics = __webpack_require__(/*! hoist-non-react-statics */ 9);
+var _hoistNonReactStatics = __webpack_require__(/*! hoist-non-react-statics */ 10);
 
 var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
@@ -5296,515 +5231,6 @@ function inject() /* fn(stores, nextProps) or ...storeNames */{
 
 /***/ }),
 /* 5 */
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _desc, _value, _class, _descriptor, _dec, _class3, _dec2, _class5;
-
-var _preact = __webpack_require__(/*! preact */ 0);
-
-var _mobxPreact = __webpack_require__(/*! mobx-preact */ 6);
-
-var _mobx = __webpack_require__(/*! mobx */ 2);
-
-var _preactRouter = __webpack_require__(/*! preact-router */ 11);
-
-var _match = __webpack_require__(/*! preact-router/match */ 12);
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function _initDefineProp(target, property, descriptor, context) {
-	if (!descriptor) return;
-	Object.defineProperty(target, property, {
-		enumerable: descriptor.enumerable,
-		configurable: descriptor.configurable,
-		writable: descriptor.writable,
-		value: descriptor.initializer ? descriptor.initializer.call(context) : void 0
-	});
-}
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
-	var desc = {};
-	Object['ke' + 'ys'](descriptor).forEach(function (key) {
-		desc[key] = descriptor[key];
-	});
-	desc.enumerable = !!desc.enumerable;
-	desc.configurable = !!desc.configurable;
-
-	if ('value' in desc || desc.initializer) {
-		desc.writable = true;
-	}
-
-	desc = decorators.slice().reverse().reduce(function (desc, decorator) {
-		return decorator(target, property, desc) || desc;
-	}, desc);
-
-	if (context && desc.initializer !== void 0) {
-		desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
-		desc.initializer = undefined;
-	}
-
-	if (desc.initializer === void 0) {
-		Object['define' + 'Property'](target, property, desc);
-		desc = null;
-	}
-
-	return desc;
-}
-
-function _initializerWarningHelper(descriptor, context) {
-	throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
-}
-
-(0, _mobx.useStrict)(true);
-
-var Store = (_class = function () {
-	function Store() {
-		_classCallCheck(this, Store);
-
-		_initDefineProp(this, 'clicks', _descriptor, this);
-	}
-
-	_createClass(Store, [{
-		key: 'inc',
-		value: function inc() {
-			this.clicks += 1;
-		}
-	}]);
-
-	return Store;
-}(), (_descriptor = _applyDecoratedDescriptor(_class.prototype, 'clicks', [_mobx.observable], {
-	enumerable: true,
-	initializer: function initializer() {
-		return 0;
-	}
-}), _applyDecoratedDescriptor(_class.prototype, 'inc', [_mobx.action], Object.getOwnPropertyDescriptor(_class.prototype, 'inc'), _class.prototype)), _class);
-var Home = (_dec = (0, _mobxPreact.inject)('store'), _dec(_class3 = (0, _mobxPreact.observer)(_class3 = function (_Component) {
-	_inherits(Home, _Component);
-
-	function Home() {
-		var _ref;
-
-		var _temp, _this, _ret;
-
-		_classCallCheck(this, Home);
-
-		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-			args[_key] = arguments[_key];
-		}
-
-		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Home.__proto__ || Object.getPrototypeOf(Home)).call.apply(_ref, [this].concat(args))), _this), _this.componentDidMount = function () {
-			return console.log('mounted');
-		}, _this.render = function (_ref2) {
-			var store = _ref2.store;
-			return (0, _preact.h)(
-				'h1',
-				{ onClick: store.inc.bind(store) },
-				'Home: ',
-				store.clicks
-			);
-		}, _temp), _possibleConstructorReturn(_this, _ret);
-	}
-
-	return Home;
-}(_preact.Component)) || _class3) || _class3);
-var Lol = (_dec2 = (0, _mobxPreact.inject)('store'), _dec2(_class5 = (0, _mobxPreact.observer)(_class5 = function (_Component2) {
-	_inherits(Lol, _Component2);
-
-	function Lol() {
-		var _ref3;
-
-		var _temp2, _this2, _ret2;
-
-		_classCallCheck(this, Lol);
-
-		for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-			args[_key2] = arguments[_key2];
-		}
-
-		return _ret2 = (_temp2 = (_this2 = _possibleConstructorReturn(this, (_ref3 = Lol.__proto__ || Object.getPrototypeOf(Lol)).call.apply(_ref3, [this].concat(args))), _this2), _this2.componentDidMount = function () {
-			return console.log('mounted');
-		}, _this2.render = function (_ref4) {
-			var store = _ref4.store;
-			return (0, _preact.h)(
-				'h1',
-				{ onClick: store.inc.bind(store) },
-				'Lol: ',
-				store.clicks
-			);
-		}, _temp2), _possibleConstructorReturn(_this2, _ret2);
-	}
-
-	return Lol;
-}(_preact.Component)) || _class5) || _class5);
-
-
-var routes = [{
-	path: '/',
-	comp: (0, _preact.h)(Home, null)
-}, {
-	path: '/lol',
-	comp: (0, _preact.h)(Lol, null)
-}];
-
-var Clicky = function Clicky() {
-	return (0, _preact.h)(
-		_preactRouter.Router,
-		null,
-		routes.map(function (route) {
-			return (0, _preact.h)(
-				'div',
-				{ path: route.path },
-				route.comp
-			);
-		})
-	);
-};
-
-(0, _preact.render)((0, _preact.h)(
-	_mobxPreact.Provider,
-	{ store: new Store() },
-	(0, _preact.h)(Clicky, null),
-	(0, _preact.h)(
-		_match.Link,
-		{ href: '/lol' },
-		'LOL'
-	)
-), document.body);
-
-/***/ }),
-/* 6 */
-/*!***********************************************!*\
-  !*** ./node_modules/mobx-preact/lib/index.js ***!
-  \***********************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.Provider = exports.inject = exports.connect = exports.useStaticRendering = exports.Observer = exports.observer = undefined;
-
-var _observer = __webpack_require__(/*! ./observer */ 1);
-
-Object.defineProperty(exports, 'observer', {
-    enumerable: true,
-    get: function get() {
-        return _observer.observer;
-    }
-});
-Object.defineProperty(exports, 'Observer', {
-    enumerable: true,
-    get: function get() {
-        return _observer.Observer;
-    }
-});
-Object.defineProperty(exports, 'useStaticRendering', {
-    enumerable: true,
-    get: function get() {
-        return _observer.useStaticRendering;
-    }
-});
-
-var _connect = __webpack_require__(/*! ./connect */ 8);
-
-Object.defineProperty(exports, 'connect', {
-    enumerable: true,
-    get: function get() {
-        return _connect.connect;
-    }
-});
-
-var _inject = __webpack_require__(/*! ./inject */ 4);
-
-Object.defineProperty(exports, 'inject', {
-    enumerable: true,
-    get: function get() {
-        return _inject.inject;
-    }
-});
-
-var _Provider = __webpack_require__(/*! ./Provider */ 10);
-
-Object.defineProperty(exports, 'Provider', {
-    enumerable: true,
-    get: function get() {
-        return _Provider.Provider;
-    }
-});
-
-var _mobx = __webpack_require__(/*! mobx */ 2);
-
-var _preact = __webpack_require__(/*! preact */ 0);
-
-if (!_preact.Component) {
-    throw new Error('mobx-preact requires Preact to be available');
-}
-if (!_mobx.extras) {
-    throw new Error('mobx-preact requires mobx to be available');
-}
-
-/***/ }),
-/* 7 */
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || Function("return this")() || (1,eval)("this");
-} catch(e) {
-	// This works if the window reference is available
-	if(typeof window === "object")
-		g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-/* 8 */
-/*!*************************************************!*\
-  !*** ./node_modules/mobx-preact/lib/connect.js ***!
-  \*************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.connect = connect;
-
-var _observer = __webpack_require__(/*! ./observer */ 1);
-
-var _inject = __webpack_require__(/*! ./inject */ 4);
-
-function connect(arg1, arg2) {
-    if (typeof arg1 === 'string') {
-        throw new Error('Store names should be provided as array');
-    }
-    if (Array.isArray(arg1)) {
-        if (!arg2) {
-            // invoked as decorator
-            return function (componentClass) {
-                return connect(arg1, componentClass);
-            };
-        } else {
-            return _inject.inject.apply(null, arg1)(connect(arg2));
-        }
-    }
-    return (0, _observer.observer)(arg1);
-}
-
-/***/ }),
-/* 9 */
-/*!*******************************************************!*\
-  !*** ./node_modules/hoist-non-react-statics/index.js ***!
-  \*******************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * Copyright 2015, Yahoo! Inc.
- * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
- */
-
-
-var REACT_STATICS = {
-    childContextTypes: true,
-    contextTypes: true,
-    defaultProps: true,
-    displayName: true,
-    getDefaultProps: true,
-    mixins: true,
-    propTypes: true,
-    type: true
-};
-
-var KNOWN_STATICS = {
-  name: true,
-  length: true,
-  prototype: true,
-  caller: true,
-  callee: true,
-  arguments: true,
-  arity: true
-};
-
-var defineProperty = Object.defineProperty;
-var getOwnPropertyNames = Object.getOwnPropertyNames;
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-var getPrototypeOf = Object.getPrototypeOf;
-var objectPrototype = getPrototypeOf && getPrototypeOf(Object);
-
-module.exports = function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
-    if (typeof sourceComponent !== 'string') { // don't hoist over string (html) components
-
-        if (objectPrototype) {
-            var inheritedComponent = getPrototypeOf(sourceComponent);
-            if (inheritedComponent && inheritedComponent !== objectPrototype) {
-                hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
-            }
-        }
-
-        var keys = getOwnPropertyNames(sourceComponent);
-
-        if (getOwnPropertySymbols) {
-            keys = keys.concat(getOwnPropertySymbols(sourceComponent));
-        }
-
-        for (var i = 0; i < keys.length; ++i) {
-            var key = keys[i];
-            if (!REACT_STATICS[key] && !KNOWN_STATICS[key] && (!blacklist || !blacklist[key])) {
-                var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
-                try { // Avoid failures from read-only properties
-                    defineProperty(targetComponent, key, descriptor);
-                } catch (e) {}
-            }
-        }
-
-        return targetComponent;
-    }
-
-    return targetComponent;
-};
-
-
-/***/ }),
-/* 10 */
-/*!**************************************************!*\
-  !*** ./node_modules/mobx-preact/lib/Provider.js ***!
-  \**************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.Provider = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _preact = __webpack_require__(/*! preact */ 0);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var specialReactKeys = { children: true, key: true, ref: true };
-
-var logger = console; // eslint-disable-line no-console
-
-var Provider = exports.Provider = function (_Component) {
-    _inherits(Provider, _Component);
-
-    function Provider() {
-        _classCallCheck(this, Provider);
-
-        return _possibleConstructorReturn(this, (Provider.__proto__ || Object.getPrototypeOf(Provider)).apply(this, arguments));
-    }
-
-    _createClass(Provider, [{
-        key: 'render',
-        value: function render(_ref) {
-            var children = _ref.children;
-
-            return children.length > 1 ? (0, _preact.h)(
-                'div',
-                null,
-                ' ',
-                children,
-                ' '
-            ) : children[0];
-        }
-    }, {
-        key: 'getChildContext',
-        value: function getChildContext() {
-            var stores = {};
-            // inherit stores
-            var baseStores = this.context.mobxStores;
-            if (baseStores) {
-                for (var key in baseStores) {
-                    stores[key] = baseStores[key];
-                }
-            }
-            // add own stores
-            for (var _key in this.props) {
-                if (!specialReactKeys[_key] && _key !== 'suppressChangedStoreWarning') {
-                    stores[_key] = this.props[_key];
-                }
-            }
-
-            return {
-                mobxStores: stores
-            };
-        }
-    }, {
-        key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps(nextProps) {
-            // Maybe this warning is too aggressive?
-            if (Object.keys(nextProps).length !== Object.keys(this.props).length) {
-                logger.warn('MobX Provider: The set of provided stores has changed. Please avoid changing stores as the change might not propagate to all children');
-            }
-            if (!nextProps.suppressChangedStoreWarning) {
-                for (var key in nextProps) {
-                    if (!specialReactKeys[key] && this.props[key] !== nextProps[key]) {
-                        logger.warn('MobX Provider: Provided store \'' + key + '\' has changed. Please avoid replacing stores as the change might not propagate to all children');
-                    }
-                }
-            }
-        }
-    }]);
-
-    return Provider;
-}(_preact.Component);
-
-/***/ }),
-/* 11 */
 /*!*************************************************************!*\
   !*** ./node_modules/preact-router/dist/preact-router.es.js ***!
   \*************************************************************/
@@ -6189,6 +5615,540 @@ Router.Link = Link;
 
 
 /***/ }),
+/* 6 */
+/*!***********************************************!*\
+  !*** ./node_modules/mobx-preact/lib/index.js ***!
+  \***********************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Provider = exports.inject = exports.connect = exports.useStaticRendering = exports.Observer = exports.observer = undefined;
+
+var _observer = __webpack_require__(/*! ./observer */ 1);
+
+Object.defineProperty(exports, 'observer', {
+    enumerable: true,
+    get: function get() {
+        return _observer.observer;
+    }
+});
+Object.defineProperty(exports, 'Observer', {
+    enumerable: true,
+    get: function get() {
+        return _observer.Observer;
+    }
+});
+Object.defineProperty(exports, 'useStaticRendering', {
+    enumerable: true,
+    get: function get() {
+        return _observer.useStaticRendering;
+    }
+});
+
+var _connect = __webpack_require__(/*! ./connect */ 9);
+
+Object.defineProperty(exports, 'connect', {
+    enumerable: true,
+    get: function get() {
+        return _connect.connect;
+    }
+});
+
+var _inject = __webpack_require__(/*! ./inject */ 4);
+
+Object.defineProperty(exports, 'inject', {
+    enumerable: true,
+    get: function get() {
+        return _inject.inject;
+    }
+});
+
+var _Provider = __webpack_require__(/*! ./Provider */ 11);
+
+Object.defineProperty(exports, 'Provider', {
+    enumerable: true,
+    get: function get() {
+        return _Provider.Provider;
+    }
+});
+
+var _mobx = __webpack_require__(/*! mobx */ 2);
+
+var _preact = __webpack_require__(/*! preact */ 0);
+
+if (!_preact.Component) {
+    throw new Error('mobx-preact requires Preact to be available');
+}
+if (!_mobx.extras) {
+    throw new Error('mobx-preact requires mobx to be available');
+}
+
+/***/ }),
+/* 7 */
+/*!******************!*\
+  !*** ./index.js ***!
+  \******************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _desc, _value, _class, _descriptor, _descriptor2, _descriptor3, _dec, _class3;
+
+var _preact = __webpack_require__(/*! preact */ 0);
+
+var _mobxPreact = __webpack_require__(/*! mobx-preact */ 6);
+
+var _mobx = __webpack_require__(/*! mobx */ 2);
+
+var _preactRouter = __webpack_require__(/*! preact-router */ 5);
+
+var _match = __webpack_require__(/*! preact-router/match */ 12);
+
+var _wrapper = __webpack_require__(/*! ./wrapper */ 13);
+
+var _wrapper2 = _interopRequireDefault(_wrapper);
+
+var _async = __webpack_require__(/*! ./async */ 14);
+
+var _async2 = _interopRequireDefault(_async);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _initDefineProp(target, property, descriptor, context) {
+	if (!descriptor) return;
+	Object.defineProperty(target, property, {
+		enumerable: descriptor.enumerable,
+		configurable: descriptor.configurable,
+		writable: descriptor.writable,
+		value: descriptor.initializer ? descriptor.initializer.call(context) : void 0
+	});
+}
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
+	var desc = {};
+	Object['ke' + 'ys'](descriptor).forEach(function (key) {
+		desc[key] = descriptor[key];
+	});
+	desc.enumerable = !!desc.enumerable;
+	desc.configurable = !!desc.configurable;
+
+	if ('value' in desc || desc.initializer) {
+		desc.writable = true;
+	}
+
+	desc = decorators.slice().reverse().reduce(function (desc, decorator) {
+		return decorator(target, property, desc) || desc;
+	}, desc);
+
+	if (context && desc.initializer !== void 0) {
+		desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
+		desc.initializer = undefined;
+	}
+
+	if (desc.initializer === void 0) {
+		Object['define' + 'Property'](target, property, desc);
+		desc = null;
+	}
+
+	return desc;
+}
+
+function _initializerWarningHelper(descriptor, context) {
+	throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
+}
+
+(0, _mobx.useStrict)(true);
+
+var Store = (_class = function () {
+	function Store() {
+		_classCallCheck(this, Store);
+
+		_initDefineProp(this, 'clicks', _descriptor, this);
+
+		_initDefineProp(this, 'role', _descriptor2, this);
+
+		_initDefineProp(this, 'name', _descriptor3, this);
+	}
+
+	_createClass(Store, [{
+		key: 'inc',
+		value: function inc() {
+			this.clicks += 1;
+		}
+	}, {
+		key: 'init',
+		value: function init(user) {
+			this.role = 'LOGGEDIN';
+			this.name = user.name;
+			console.log('Router should have re-rendered now!');
+		}
+	}]);
+
+	return Store;
+}(), (_descriptor = _applyDecoratedDescriptor(_class.prototype, 'clicks', [_mobx.observable], {
+	enumerable: true,
+	initializer: function initializer() {
+		return 0;
+	}
+}), _descriptor2 = _applyDecoratedDescriptor(_class.prototype, 'role', [_mobx.observable], {
+	enumerable: true,
+	initializer: function initializer() {
+		return 'GUEST';
+	}
+}), _descriptor3 = _applyDecoratedDescriptor(_class.prototype, 'name', [_mobx.observable], {
+	enumerable: true,
+	initializer: function initializer() {
+		return 'Guest';
+	}
+}), _applyDecoratedDescriptor(_class.prototype, 'inc', [_mobx.action], Object.getOwnPropertyDescriptor(_class.prototype, 'inc'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'init', [_mobx.action], Object.getOwnPropertyDescriptor(_class.prototype, 'init'), _class.prototype)), _class);
+
+
+var routes = [{
+	path: '/',
+	roles: ['LOGGEDIN'],
+	comp: function comp() {
+		return __webpack_require__.e/* import() */(2/*! home-view */).then(__webpack_require__.bind(null, /*! ./Home.js */ 15)).then(function (module) {
+			return module.default;
+		});
+	}
+}, {
+	path: '/lol',
+	roles: ['LOGGEDIN'],
+	comp: function comp() {
+		return __webpack_require__.e/* import() */(0/*! lol-view */).then(__webpack_require__.bind(null, /*! ./Lol.js */ 16)).then(function (module) {
+			return module.default;
+		});
+	}
+}];
+
+var Clicky = (_dec = (0, _mobxPreact.inject)('store'), _dec(_class3 = (0, _mobxPreact.observer)(_class3 = function (_Component) {
+	_inherits(Clicky, _Component);
+
+	function Clicky() {
+		var _ref;
+
+		var _temp, _this, _ret;
+
+		_classCallCheck(this, Clicky);
+
+		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+			args[_key] = arguments[_key];
+		}
+
+		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Clicky.__proto__ || Object.getPrototypeOf(Clicky)).call.apply(_ref, [this].concat(args))), _this), _this.componentDidMount = function () {
+			fetch('https://jsonplaceholder.typicode.com/users/5').then(function (res) {
+				return res.json();
+			}).then(function (res) {
+				_this.props.store.init(res);
+			}).catch(function (err) {
+				return console.error(err);
+			});
+		}, _this.importLoginPage = function () {
+			return __webpack_require__.e/* import() */(1/*! login-view */).then(__webpack_require__.bind(null, /*! ./Login.js */ 17)).then(function (module) {
+				return module.default;
+			});
+		}, _this.render = function (_ref2) {
+			var store = _ref2.store;
+			return (0, _preact.h)(
+				_preactRouter.Router,
+				null,
+				routes.map(function (route) {
+					return route.roles.includes(store.role) ? (0, _preact.h)(
+						_wrapper2.default,
+						{ path: route.path, key: route.path },
+						(0, _preact.h)(_async2.default, { loadFunction: route.comp })
+					) : (0, _preact.h)(
+						_wrapper2.default,
+						{ path: route.path, key: route.path },
+						(0, _preact.h)(_async2.default, { loadFunction: _this.importLoginPage })
+					);
+				})
+			);
+		}, _temp), _possibleConstructorReturn(_this, _ret);
+	}
+
+	return Clicky;
+}(_preact.Component)) || _class3) || _class3);
+
+
+(0, _preact.render)((0, _preact.h)(
+	_mobxPreact.Provider,
+	{ store: new Store() },
+	(0, _preact.h)(Clicky, null),
+	(0, _preact.h)(
+		_match.Link,
+		{ href: '/' },
+		'HOME'
+	),
+	(0, _preact.h)('br', null),
+	(0, _preact.h)(
+		_match.Link,
+		{ href: '/lol' },
+		'LOL'
+	)
+), document.body);
+
+/***/ }),
+/* 8 */
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1,eval)("this");
+} catch(e) {
+	// This works if the window reference is available
+	if(typeof window === "object")
+		g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 9 */
+/*!*************************************************!*\
+  !*** ./node_modules/mobx-preact/lib/connect.js ***!
+  \*************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.connect = connect;
+
+var _observer = __webpack_require__(/*! ./observer */ 1);
+
+var _inject = __webpack_require__(/*! ./inject */ 4);
+
+function connect(arg1, arg2) {
+    if (typeof arg1 === 'string') {
+        throw new Error('Store names should be provided as array');
+    }
+    if (Array.isArray(arg1)) {
+        if (!arg2) {
+            // invoked as decorator
+            return function (componentClass) {
+                return connect(arg1, componentClass);
+            };
+        } else {
+            return _inject.inject.apply(null, arg1)(connect(arg2));
+        }
+    }
+    return (0, _observer.observer)(arg1);
+}
+
+/***/ }),
+/* 10 */
+/*!*******************************************************!*\
+  !*** ./node_modules/hoist-non-react-statics/index.js ***!
+  \*******************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright 2015, Yahoo! Inc.
+ * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
+ */
+
+
+var REACT_STATICS = {
+    childContextTypes: true,
+    contextTypes: true,
+    defaultProps: true,
+    displayName: true,
+    getDefaultProps: true,
+    mixins: true,
+    propTypes: true,
+    type: true
+};
+
+var KNOWN_STATICS = {
+  name: true,
+  length: true,
+  prototype: true,
+  caller: true,
+  callee: true,
+  arguments: true,
+  arity: true
+};
+
+var defineProperty = Object.defineProperty;
+var getOwnPropertyNames = Object.getOwnPropertyNames;
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+var getPrototypeOf = Object.getPrototypeOf;
+var objectPrototype = getPrototypeOf && getPrototypeOf(Object);
+
+module.exports = function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
+    if (typeof sourceComponent !== 'string') { // don't hoist over string (html) components
+
+        if (objectPrototype) {
+            var inheritedComponent = getPrototypeOf(sourceComponent);
+            if (inheritedComponent && inheritedComponent !== objectPrototype) {
+                hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
+            }
+        }
+
+        var keys = getOwnPropertyNames(sourceComponent);
+
+        if (getOwnPropertySymbols) {
+            keys = keys.concat(getOwnPropertySymbols(sourceComponent));
+        }
+
+        for (var i = 0; i < keys.length; ++i) {
+            var key = keys[i];
+            if (!REACT_STATICS[key] && !KNOWN_STATICS[key] && (!blacklist || !blacklist[key])) {
+                var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+                try { // Avoid failures from read-only properties
+                    defineProperty(targetComponent, key, descriptor);
+                } catch (e) {}
+            }
+        }
+
+        return targetComponent;
+    }
+
+    return targetComponent;
+};
+
+
+/***/ }),
+/* 11 */
+/*!**************************************************!*\
+  !*** ./node_modules/mobx-preact/lib/Provider.js ***!
+  \**************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Provider = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _preact = __webpack_require__(/*! preact */ 0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var specialReactKeys = { children: true, key: true, ref: true };
+
+var logger = console; // eslint-disable-line no-console
+
+var Provider = exports.Provider = function (_Component) {
+    _inherits(Provider, _Component);
+
+    function Provider() {
+        _classCallCheck(this, Provider);
+
+        return _possibleConstructorReturn(this, (Provider.__proto__ || Object.getPrototypeOf(Provider)).apply(this, arguments));
+    }
+
+    _createClass(Provider, [{
+        key: 'render',
+        value: function render(_ref) {
+            var children = _ref.children;
+
+            return children.length > 1 ? (0, _preact.h)(
+                'div',
+                null,
+                ' ',
+                children,
+                ' '
+            ) : children[0];
+        }
+    }, {
+        key: 'getChildContext',
+        value: function getChildContext() {
+            var stores = {};
+            // inherit stores
+            var baseStores = this.context.mobxStores;
+            if (baseStores) {
+                for (var key in baseStores) {
+                    stores[key] = baseStores[key];
+                }
+            }
+            // add own stores
+            for (var _key in this.props) {
+                if (!specialReactKeys[_key] && _key !== 'suppressChangedStoreWarning') {
+                    stores[_key] = this.props[_key];
+                }
+            }
+
+            return {
+                mobxStores: stores
+            };
+        }
+    }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            // Maybe this warning is too aggressive?
+            if (Object.keys(nextProps).length !== Object.keys(this.props).length) {
+                logger.warn('MobX Provider: The set of provided stores has changed. Please avoid changing stores as the change might not propagate to all children');
+            }
+            if (!nextProps.suppressChangedStoreWarning) {
+                for (var key in nextProps) {
+                    if (!specialReactKeys[key] && this.props[key] !== nextProps[key]) {
+                        logger.warn('MobX Provider: Provided store \'' + key + '\' has changed. Please avoid replacing stores as the change might not propagate to all children');
+                    }
+                }
+            }
+        }
+    }]);
+
+    return Provider;
+}(_preact.Component);
+
+/***/ }),
 /* 12 */
 /*!*********************************************!*\
   !*** ./node_modules/preact-router/match.js ***!
@@ -6209,7 +6169,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var _preact = __webpack_require__(/*! preact */ 0);
 
-var _preactRouter = __webpack_require__(/*! preact-router */ 11);
+var _preactRouter = __webpack_require__(/*! preact-router */ 5);
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
@@ -6280,5 +6240,139 @@ exports.default = Match;
 Match.Link = Link;
 
 
+/***/ }),
+/* 13 */
+/*!********************!*\
+  !*** ./wrapper.js ***!
+  \********************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _preact = __webpack_require__(/*! preact */ 0);
+
+exports.default = function (props) {
+	var children = props.children;
+
+
+	return (0, _preact.h)(
+		'main',
+		null,
+		(0, _preact.cloneElement)(children[0], _extends({}, props))
+	);
+};
+
+/***/ }),
+/* 14 */
+/*!******************!*\
+  !*** ./async.js ***!
+  \******************/
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _preact = __webpack_require__(/*! preact */ 0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AsyncRoute = function (_Component) {
+	_inherits(AsyncRoute, _Component);
+
+	function AsyncRoute() {
+		_classCallCheck(this, AsyncRoute);
+
+		var _this = _possibleConstructorReturn(this, (AsyncRoute.__proto__ || Object.getPrototypeOf(AsyncRoute)).call(this));
+
+		_this.loadComponent = function () {
+
+			if (_this.props.load) {
+				return _this.setState({
+					componentData: _this.props.load
+				});
+			}
+
+			var componentData = _this.props.loadFunction(_this.props.url, function (_ref) {
+				var component = _ref.component;
+
+
+				if (component) {
+					_this.setState({
+						componentData: component
+					});
+				}
+			}, Object.assign({}, _this.props, _this.props.matches));
+
+			if (componentData && componentData.then) {
+
+				(function (url) {
+					componentData.then(function (component) {
+						if (url !== _this.props.url) {
+							_this.setState({ componentData: null }, function () {
+								_this.loadComponent();
+							});
+							return;
+						}
+						_this.setState({
+							componentData: component
+						});
+					});
+				})(_this.props.url);
+			}
+		};
+
+		_this.componentDidMount = function () {
+			_this.loadComponent();
+		};
+
+		_this.componentWillReceiveProps = function () {
+			if (document.location.href !== _this.state.location) {
+				_this.setState({ location: document.location.href });
+				_this.loadComponent();
+			}
+		};
+
+		_this.render = function () {
+			if (_this.state.componentData) {
+				return (0, _preact.h)(_this.state.componentData, _this.props); // smarter to use h() than JSX here
+			} else if (_this.props.loading) {
+				var loadingComponent = _this.props.loading();
+				return loadingComponent;
+			}
+			return null;
+		};
+
+		_this.state = {
+			componentData: null,
+			location: undefined
+		};
+		return _this;
+	}
+
+	return AsyncRoute;
+}(_preact.Component);
+
+exports.default = AsyncRoute;
+
 /***/ })
-/******/ ]);
+],[7]);
+//# sourceMappingURL=main.bundle.js.map
