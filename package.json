@@ -1,0 +1,30 @@
+{
+  "name": "mobx-preact-debugging",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/m4r1vs/mobx-preact-debugging.git",
+  "author": "Marius Niveri <marius.niveri@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch"
+  },
+  "dependencies": {
+    "mobx": "^3.4.1",
+    "mobx-preact": "^1.1.0",
+    "preact": "^8.2.7",
+    "preact-router": "^2.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.5",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.10.0"
+  }
+}
